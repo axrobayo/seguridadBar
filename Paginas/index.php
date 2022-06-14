@@ -118,7 +118,7 @@
                                     <div class="flex flex-row items-center">
                                     <div class="flex-shrink pr-4">
                                         <div class="rounded-full p-5 bg-green-600"><i
-                                                class="fa fa-wallet fa-2x fa-inverse"></i></div>
+                                                class="fa fa-home fa-2x fa-inverse"></i></div>
                                     </div>
                                     <div class="flex-1 text-right md:text-center">
                                         <p class="font-bold text-3xl">BARES <span class="text-green-500"><i
