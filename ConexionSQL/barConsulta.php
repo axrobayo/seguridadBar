@@ -1,7 +1,5 @@
 <?php 
-
 	require '../ConexionSQL/conexion.php';
-    
     //$consultar="SELECT * FROM bar";
     $consultar="SELECT Bar.cam_id,Bar.bar_id,Bar.bar_nombre,Bar.bar_abierto,
     Cam.cam_nombre,Cam.cam_direccion
@@ -13,6 +11,6 @@
         die("Connection failed: " . mysqli_connect_error());
     }
     
-    echo "Connected successfully";
+    //echo "Connected successfully";
     mysqli_close($conn);
  ?>
