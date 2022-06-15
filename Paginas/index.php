@@ -360,7 +360,7 @@
                                                 class="fas fa-user-plus fa-2x fa-inverse"></i></div>
                                     </div>
                                     <div class="flex-1 text-right md:text-center">
-                                        <h2 class="font-bold uppercase text-gray-600">New Users</h2>
+                                        <h2 class="font-bold uppercase text-gray-600">Menú</h2>
                                         <p class="font-bold text-3xl">2 <span class="text-yellow-600"><i
                                                     class="fas fa-caret-up"></i></span></p>
                                     </div>
