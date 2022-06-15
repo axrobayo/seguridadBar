@@ -236,7 +236,7 @@
                                                     class="fas fa-users fa-2x fa-inverse"></i></div>
                                         </div>
                                         <div class="flex-1 text-right md:text-center">
-                                            <p class="font-bold text-3xl">Snacks <span class="text-pink-500"><i
+                                            <p class="font-bold text-3xl">SNACKS <span class="text-pink-500"><i
                                                         class="fas fa-caret-up"></i></span></p>
                                         </div>
                                     </div>
@@ -363,7 +363,7 @@
                                                 class="fas fa-user-plus fa-2x fa-inverse"></i></div>
                                         </div>
                                         <div class="flex-1 text-right md:text-center">
-                                            <p class="font-bold text-3xl">Menú <span class="text-yellow-600"><i
+                                            <p class="font-bold text-3xl">MENÚ <span class="text-yellow-600"><i
                                                     class="fas fa-caret-up"></i></span></p>
                                         </div>
                                     </div>
@@ -490,7 +490,7 @@
                                                 class="fas fa-server fa-2x fa-inverse"></i></div>
                                         </div>
                                         <div class="flex-1 text-right md:text-center">
-                                            <p class="font-bold text-3xl">Buzon</p>
+                                            <p class="font-bold text-3xl">BUZÓN</p>
                                         </div>
                                     </div>
                                 </button>
@@ -547,7 +547,6 @@
                                                             <th
                                                                 class="font-semibold text-sm uppercase px-5 py-4 ">
                                                                 DESCRIPCIÓN </th>
-                                                            <th class="font-semibold text-sm uppercase px-1 py-4"> </th>
                                                         </tr>
                                                     </thead>
                                                     <tbody class="divide-y divide-gray-200">
@@ -574,7 +573,7 @@
                                                                     class="text-white text-sm w-1/3 pb-1 bg-green-600 font-semibold px-2 rounded-full">
                                                                     <?php echo $row['buz_fecha'] ?> </span> </td>
                                                             <td class="px-6 py-4 text-center">
-                                                                <?php echo $row['men_descripcion'] ?>
+                                                                <?php echo $row['buz_descripcion'] ?>
                                                             </td>
                                                             
                                                         </tr>
@@ -591,20 +590,112 @@
                             <!--/Metric Card-->
                         </div>
                         <div class="w-full md:w-1/2 xl:w-1/3 p-6">
-                            <!--Metric Card-->
-                            <div
-                                class="bg-gradient-to-b from-indigo-200 to-indigo-100 border-b-4 border-indigo-500 rounded-lg shadow-xl p-5">
-                                <div class="flex flex-row items-center">
-                                    <div class="flex-shrink pr-4">
-                                        <div class="rounded-full p-5 bg-indigo-600"><i
+                            <!--Modal open-->
+                            <?php require '../ConexionSQL/preferenciasConsulta.php';?>
+                            <div x-data="{ modelOpen: false }">
+                                <button @click="modelOpen =!modelOpen"
+                                    class="bg-gradient-to-b from-indigo-200 to-indigo-100 border-b-4 border-indigo-500 rounded-lg shadow-xl p-5">
+                                    <div class="flex flex-row items-center">
+                                        <div class="flex-shrink pr-4">
+                                            <div class="rounded-full p-5 bg-indigo-600"><i
                                                 class="fas fa-tasks fa-2x fa-inverse"></i></div>
+                                        </div>
+                                        <div class="flex-1 text-right md:text-center">
+                                            <p class="font-bold text-3xl">PREFERENCIAS</p>
+                                        </div>
                                     </div>
-                                    <div class="flex-1 text-right md:text-center">
-                                        <h2 class="font-bold uppercase text-gray-600">To Do List</h2>
-                                        <p class="font-bold text-3xl">7 tasks</p>
+                                </button>
+                                <div x-show="modelOpen" class="fixed inset-0 z-50 overflow-y-auto"
+                                    aria-labelledby="modal-title" role="dialog" aria-modal="true">
+                                    <div
+                                        class="flex items-end justify-center min-h-screen px-4 text-center md:items-center sm:block sm:p-0">
+                                        <div x-cloak @click="modelOpen = false" x-show="modelOpen"
+                                            x-transition:enter="transition ease-out duration-300 transform"
+                                            x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+                                            x-transition:leave="transition ease-in duration-200 transform"
+                                            x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
+                                            class="fixed inset-0 transition-opacity bg-gray-500 bg-opacity-40"
+                                            aria-hidden="true"></div>
+
+                                        <div x-cloak x-show="modelOpen"
+                                            x-transition:enter="transition ease-out duration-300 transform"
+                                            x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                                            x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+                                            x-transition:leave="transition ease-in duration-200 transform"
+                                            x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
+                                            x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                                            class="inline-block w-full max-w-xl p-8 my-20 overflow-hidden text-left transition-all transform bg-white rounded-lg shadow-xl 2xl:max-w-2xl">
+                                            <div class="flex items-center justify-between space-x-4">
+                                                <h1 class="text-xl font-medium text-gray-800 ">Preferencias</h1>
+
+                                                <button @click="modelOpen = false"
+                                                    class="text-gray-600 focus:outline-none hover:text-gray-700">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                                                        viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            stroke-width="2"
+                                                            d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                    </svg>
+                                                </button>
+                                            </div>
+
+                                            <p class="mt-2 text-sm text-gray-500 ">
+                                                Preferencias del día
+                                            </p>
+
+                                            <form class="mt-4">
+                                                <table
+                                                    class='mx-auto max-w-4xl w-full whitespace-nowrap rounded-lg bg-white divide-y divide-gray-300 overflow-hidden'>
+                                                    <thead class="bg-gray-900">
+                                                        <tr class="text-white text-left">
+                                                            <th class="font-semibold text-sm uppercase px-4 py-3"> Id
+                                                            </th>
+                                                            <th class="font-semibold text-sm uppercase px-5 py-4">
+                                                                Menu</th>
+                                                            <th
+                                                                class="font-semibold text-sm uppercase px-5 py-4 ">
+                                                                Fecha  </th>
+                                                            <th
+                                                                class="font-semibold text-sm uppercase px-5 py-4 ">
+                                                                Observación </th>
+                                                            <th class="font-semibold text-sm uppercase px-1 py-4"> </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class="divide-y divide-gray-200">
+                                                        <?php 
+                                                        foreach($query as $row){?>
+                                                        <tr>
+                                                            <td class="px-6 py-4">
+                                                                <div class="flex items-center space-x-3">
+                                                                    <div class="inline-flex w-10 h-10"> <img
+                                                                            class='w-10 h-10 object-cover rounded-full'
+                                                                            alt='User avatar'
+                                                                            src='https://i.imgur.com/siKnZP2.jpg' />
+                                                                    </div>
+                                                                    <div>
+
+                                                                        <p class=""> <?php echo $row['pre_id'] ?> </p>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="px-6 py-4">
+                                                                <p> <?php echo $row['men_nombre'] ?></p>
+                                                            </td>
+                                                            <td class="px-6 py-4 text-center"> <span
+                                                                    class="text-white text-sm w-1/3 pb-1 bg-green-600 font-semibold px-2 rounded-full">
+                                                                    <?php echo $row['pre_fecha'] ?> </span> </td>
+                                                            <td class="px-6 py-4 text-center">
+                                                                <?php echo $row['pre_observacion'] ?></td>
+                                                        </tr>
+                                                        <?php }?>
+                                                    </tbody>
+                                                </table>
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <!--Modal close-->
                             <!--/Metric Card-->
                         </div>
                         <div class="w-full md:w-1/2 xl:w-1/3 p-6">
