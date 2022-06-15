@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tailwind Admin Starter Template : Tailwind Toolbox</title>
+    <title>Bar ESPEL</title>
     <meta name="author" content="name">
     <meta name="description" content="description here">
     <meta name="keywords" content="keywords,here">
@@ -161,8 +161,7 @@
                                             <p class="mt-2 text-sm text-gray-500 ">
                                                 Bares con su nombre respectivo y campus
                                             </p>
-
-                                            <form class="mt-5">
+                                            <form class="mt-4">
                                                 <table
                                                     class='mx-auto max-w-4xl w-full whitespace-nowrap rounded-lg bg-white divide-y divide-gray-300 overflow-hidden'>
                                                     <thead class="bg-gray-900">
@@ -186,11 +185,6 @@
                                                         <tr>
                                                             <td class="px-6 py-4">
                                                                 <div class="flex items-center space-x-3">
-                                                                    <div class="inline-flex w-10 h-10"> <img
-                                                                            class='w-10 h-10 object-cover rounded-full'
-                                                                            alt='User avatar'
-                                                                            src='https://i.imgur.com/siKnZP2.jpg' />
-                                                                    </div>
                                                                     <div>
 
                                                                         <p class=""> <?php echo $row['bar_id'] ?> </p>
@@ -304,11 +298,6 @@
                                                         <tr>
                                                             <td class="px-6 py-4">
                                                                 <div class="flex items-center space-x-3">
-                                                                    <div class="inline-flex w-10 h-10"> <img
-                                                                            class='w-10 h-10 object-cover rounded-full'
-                                                                            alt='User avatar'
-                                                                            src='https://i.imgur.com/siKnZP2.jpg' />
-                                                                    </div>
                                                                     <div>
 
                                                                         <p class=""> <?php echo $row['sna_id'] ?> </p>
@@ -322,7 +311,7 @@
                                                                     class="text-white text-sm w-1/3 pb-1 bg-green-600 font-semibold px-2 rounded-full">
                                                                     <?php echo $row['sna_nombre'] ?> </span> </td>
                                                             <td class="px-6 py-4 text-center">
-                                                                <?php echo $row['sna_precio'] ?></td>
+                                                                <?php echo "$ ".$row['sna_precio'] ?></td>
                                                             <td class="px-6 py-4 text-center">
                                                             </td>
                                                             <td class="px-6 py-4 text-center">
@@ -428,11 +417,6 @@
                                                         <tr>
                                                             <td class="px-6 py-4">
                                                                 <div class="flex items-center space-x-3">
-                                                                    <div class="inline-flex w-10 h-10"> <img
-                                                                            class='w-10 h-10 object-cover rounded-full'
-                                                                            alt='User avatar'
-                                                                            src='https://i.imgur.com/siKnZP2.jpg' />
-                                                                    </div>
                                                                     <div>
 
                                                                         <p class=""> <?php echo $row['men_id'] ?> </p>
@@ -446,7 +430,7 @@
                                                                     class="text-white text-sm w-1/3 pb-1 bg-green-600 font-semibold px-2 rounded-full">
                                                                     <?php echo $row['men_nombre'] ?> </span> </td>
                                                             <td class="px-6 py-4 text-center">
-                                                                <?php echo $row['men_precio'] ?></td>
+                                                                <?php echo "$ ".$row['men_precio'] ?></td>
                                                             <td class="px-6 py-4 text-center">
                                                                 <?php echo $row['men_disponible'] ?>
                                                             </td>
@@ -480,7 +464,9 @@
                                                 class="fas fa-envelope fa-2x fa-inverse"></i></div>
                                         </div>
                                         <div class="flex-1 text-right md:text-center">
-                                            <p class="font-bold text-3xl">BUZÓN</p>
+                                            <p class="font-bold text-3xl">BUZÓN <span class="text-blue-500"><i
+                                                        class="fas fa-caret-up"></i></span></p>
+
                                         </div>
                                     </div>
                                 </button>
@@ -545,11 +531,6 @@
                                                         <tr>
                                                             <td class="px-6 py-4">
                                                                 <div class="flex items-center space-x-3">
-                                                                    <div class="inline-flex w-10 h-10"> <img
-                                                                            class='w-10 h-10 object-cover rounded-full'
-                                                                            alt='User avatar'
-                                                                            src='https://i.imgur.com/siKnZP2.jpg' />
-                                                                    </div>
                                                                     <div>
 
                                                                         <p class=""> <?php echo $row['buz_id'] ?> </p>
@@ -591,7 +572,8 @@
                                                 class="fas fa-tasks fa-2x fa-inverse"></i></div>
                                         </div>
                                         <div class="flex-1 text-right md:text-center">
-                                            <p class="font-bold text-3xl">PREFERENCIAS</p>
+                                            <p class="font-bold text-3xl">PREFERENCIAS <span class="text-indigo-500"><i
+                                                        class="fas fa-caret-up"></i></span></p>
                                         </div>
                                     </div>
                                 </button>
@@ -657,11 +639,6 @@
                                                         <tr>
                                                             <td class="px-6 py-4">
                                                                 <div class="flex items-center space-x-3">
-                                                                    <div class="inline-flex w-10 h-10"> <img
-                                                                            class='w-10 h-10 object-cover rounded-full'
-                                                                            alt='User avatar'
-                                                                            src='https://i.imgur.com/siKnZP2.jpg' />
-                                                                    </div>
                                                                     <div>
 
                                                                         <p class=""> <?php echo $row['pre_id'] ?> </p>
