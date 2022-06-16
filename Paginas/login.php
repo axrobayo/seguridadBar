@@ -16,7 +16,7 @@
             { 
                 session_start();
                 $_SESSION['nombredelusuario']=$nombre;
-                header("Location: principal.php");
+                header("Location: index.php");
             }
         else
             {
@@ -44,7 +44,7 @@
         }
         else 
         {
-            echo "Error: " .$queryregistrar."<br>".mysql_error($conn);
+            echo "Error: " .$queryregistrar."<br>".mysqli_error($conn);
         }
 
         }else
