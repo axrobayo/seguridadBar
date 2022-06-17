@@ -40,16 +40,9 @@
                 <div class="flex w-full pt-2 content-center justify-between md:w-1/3 md:justify-end">
                     <ul class="list-reset flex justify-between flex-1 md:flex-none items-center">
                         <li class="flex-1 md:flex-none md:mr-3">
-                            <a class="inline-block py-2 px-4 text-white no-underline" href="#">Active</a>
-                        </li>
-                        <li class="flex-1 md:flex-none md:mr-3">
-                            <a class="inline-block text-gray-400 no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
-                                href="#">link</a>
-                        </li>
-                        <li class="flex-1 md:flex-none md:mr-3">
                             <div class="relative inline-block">
                                 <button onclick="toggleDD('myDropdown')" class="drop-button text-white py-2 px-2"> <span
-                                        class="pr-2"><i class="em em-robot_face"></i></span> Hi, User <svg
+                                        class="pr-2"><i class="em em-robot_face"></i></span> Hi, Usuario <svg
                                         class="h-3 fill-current inline" xmlns="http://www.w3.org/2000/svg"
                                         viewBox="0 0 20 20">
                                         <path
@@ -61,17 +54,17 @@
                                         id="myInput" onkeyup="filterDD('myDropdown','myInput')">
                                     <a href="#"
                                         class="p-2 hover:bg-gray-800 text-white text-sm no-underline hover:no-underline block"><i
-                                            class="fa fa-user fa-fw"></i> Profile</a>
+                                            class="fa fa-user fa-fw"></i> Perfil</a>
                                     <a href="#"
                                         class="p-2 hover:bg-gray-800 text-white text-sm no-underline hover:no-underline block"><i
-                                            class="fa fa-cog fa-fw"></i> Settings</a>
+                                            class="fa fa-cog fa-fw"></i> Configuraciones</a>
                                     <div class="border border-gray-800"></div>
                                     <!-- -->
                                     
                                     <!-- -->
                                     <a href="logout.php"
                                         class="p-2 hover:bg-gray-800 text-white text-sm no-underline hover:no-underline block"><i
-                                            class="fas fa-sign-out-alt fa-fw"></i> Log Out</a>
+                                            class="fas fa-sign-out-alt fa-fw"></i> Salir</a>
                                 </div>
                             </div>
                         </li>
