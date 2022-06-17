@@ -651,9 +651,14 @@
                             <!--/Metric Card-->
                         </div>
                     </div>
-
-
-                    
+                    <!--Carousel open-->                                            
+                    <div align="center", class="imagen" >
+                        <img src="https://blog.megashoptv.tv/wp-content/uploads/2019/09/Consecuencias-del-consumo-de-comida-chatarra.jpg"
+                            width="800"
+                            height="600"
+                        >
+                    </div>                                           
+                    <!--Carousel close-->
 
                     </div>
                 </div>
