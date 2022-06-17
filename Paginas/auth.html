@@ -3,6 +3,7 @@
 	<meta charset="UTF-8">
      <title>Autenticación</title>
      <link rel="stylesheet" href="/assets/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="cajafuera">
@@ -15,7 +16,14 @@
 		<!--Formulario para el login -->
         <form id="frmlogin" class="grupo-entradas" method="POST" action="login.php">
             <input type="text" class="cajaentradatexto" placeholder="&#128273; Ingresar usuario" name="txtusuario" required>
-            <input type="text" class="cajaentradatexto" placeholder="&#128274; Ingresar contraseña" name="txtpassword" required>
+            <input id="contrasena" type="password" class="cajaentradatexto" placeholder="&#128274; Ingresar contraseña" name="txtpassword" required>
+            <div class="col">
+                <label for="password"></label>
+                <!-- checkbox que nos permite activar o desactivar la opcion -->
+                <div style="margin-top:15px;">
+                    <input style="margin-left:130px;" type="checkbox" id="mostrar_contrasena" title="clic para mostrar contraseña"/>
+                    &nbsp;&nbsp;Mostrar Contraseña</div>
+            </div>
             <input type="checkbox" class="checkboxvai"><span>Recordar contraseña</span>
             <button type="submit" class="botonenviar" name="btnloginx">Iniciar sesión</button>
         </form>
@@ -30,6 +38,15 @@
         </div>
     </div>
     <script>
+        $(document).ready(function () {
+        $('#mostrar_contrasena').click(function () {
+            if ($('#mostrar_contrasena').is(':checked')) {
+            $('#contrasena').attr('type', 'text');
+            } else {
+            $('#contrasena').attr('type', 'password');
+            }
+        });
+        });
     var x = document.getElementById("frmlogin");
     var y = document.getElementById("frmregistrar");
     var z = document.getElementById("btnvai");
